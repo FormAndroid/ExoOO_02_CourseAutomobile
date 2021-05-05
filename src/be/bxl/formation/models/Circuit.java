@@ -17,7 +17,7 @@ public class Circuit {
     }
 
     public void setKilometrage(double kilometrage) {
-        if(kilometrage > 0)
+        if(kilometrage < 0)
             throw new IllegalArgumentException("Le kilometrage doit etre supperieur à zero :o");
 
         this.kilometrage = kilometrage;
