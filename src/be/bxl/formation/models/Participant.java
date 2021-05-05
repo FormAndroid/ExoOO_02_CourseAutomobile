@@ -1,9 +1,6 @@
 package be.bxl.formation.models;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.*;
 
 public class Participant {
 
@@ -28,9 +25,9 @@ public class Participant {
         return numero;
     }
 
-    public ArrayList<Double> getTempsTour() {
-        // TODO Cleanup this ;)
-        return new ArrayList<>(tempsTour);
+    public List<Double> getTempsTour() {
+        // Renvois une liste en lecture seul
+        return Collections.unmodifiableList(tempsTour);
     }
 
     public double getTempsTotal() {
